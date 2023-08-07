@@ -41,8 +41,6 @@ def get_message_text():
     return f'*Дней без уебана: {get_days_without_bro()}*\n{get_anec_by_index(get_anec_index())}'
 
 def job():
-    print('SEND!')
-    print(get_message_text())
     vk.messages.send(
         key=vk_key,
         server=f'https://lp.vk.com/whp/{group_id}',
@@ -52,8 +50,8 @@ def job():
         chat_id=chat_id
     )
 
-#schedule.every().day.at("16:52", timezone("UTC")).do(job)
-schedule.every(10).seconds.do(job)
+schedule.every().day.at("05:00", timezone("UTC")).do(job)
+#schedule.every(10).seconds.do(job)
 
 if __name__ == '__main__':
     while True:
