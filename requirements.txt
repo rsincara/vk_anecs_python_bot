@@ -1,0 +1,5 @@
+schedule
+vk_api
+requests
+python-dotenv
+pytz
